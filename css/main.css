@@ -440,14 +440,11 @@ footer .container {
 footer .container p {
     color: white;
 }
-.small-footer{
-    bottom: -100px;
+
+.small-footer {
+    display: none;
 }
-@media (max-width:767px) {
-    .small-footer{
-        display: none;
-    }
-}
+
 /* About us page  */
 .bar .container {
     background-color: rgb(192, 160, 128);
@@ -571,7 +568,8 @@ footer .container p {
     background-color: cornflowerblue;
     color: white;
 }
-.location i{
+
+.location i {
     color: #8c0a14;
 }
 
@@ -580,7 +578,8 @@ footer .container p {
         flex-direction: column;
         gap: 10px;
     }
-    .area textarea{
+
+    .area textarea {
         width: 300px;
     }
 }
