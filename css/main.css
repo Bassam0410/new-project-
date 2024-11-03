@@ -134,27 +134,20 @@ header .links li:hover a {
     color: #c0a080;
 }
 
-header .links .on {
-    position: absolute;
-    top: 40px;
-    left: 10px;
-    opacity: 0;
-    transition: 0.3s;
-}
+@media (max-width:767px) {
+    header .container {
+        height: 40px;
+    }
 
-header .links li.list:hover .on {
-    opacity: 1;
-    top: 30px;
-}
+    header .links li {
+        margin: 0 3px;
+        padding: 3px 5px;
+    }
 
-.ourphoto {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.para {
-    margin-right: 20px;
+    header .logo img {
+        width: 70px;
+        bottom: -35px;
+    }
 }
 
 /* museum */
@@ -170,21 +163,21 @@ header .links li.list:hover .on {
 
 }
 
-.museumphoto {
+.museum .photo {
     overflow: hidden;
     width: 500px;
     height: 287px;
     border-radius: var(--main-border-r);
 }
 
-.museumphoto img {
+.museum .photo img {
     width: 100%;
     height: 100%;
     transition: 0.3s;
     box-shadow: 8px 0px 8px 0px;
 }
 
-.museumphoto img:hover {
+.museum .photo img:hover {
     transform: scale(1.15);
     transform: perspective(100%);
 }
@@ -207,7 +200,7 @@ header .links li.list:hover .on {
     margin: 0;
 }
 
-.museumphoto:hover+.paragraph p {
+.museum .photo:hover+.paragraph p {
     animation: up-down 2.5s infinite linear;
 }
 
@@ -280,28 +273,27 @@ header .links li.list:hover .on {
     margin: 0;
 }
 
-.ship .picture {
+.ship .photo {
     overflow: hidden;
     width: 500px;
     height: 287px;
     border-radius: var(--main-border-r);
 }
 
-.ship .picture img {
+.ship .photo img {
     overflow: hidden;
     width: 100%;
     height: 100%;
     box-shadow: 8px 0px 8px 0px;
-    transition: .3s;
     transition: 0.3s;
 }
 
-.ship .picture img:hover {
+.ship .photo img:hover {
     transform: scale(1.20);
 
 }
 
-.ship .picture:hover+.paragraph p {
+.ship .photo:hover+.paragraph p {
     animation: up-down 2.5s linear infinite;
 
 }
@@ -416,6 +408,46 @@ header .links li.list:hover .on {
     animation: up-down infinite linear 2.5s;
 }
 
+/* phone  */
+@media (max-width:767px) {
+    .space .container {
+        flex-direction: column;
+    }
+
+    .space .paragraph {
+        width: 90%;
+    }
+
+    .space .photo {
+        width: 90%;
+    }
+}
+
+/* footer  */
+footer {
+    background-color: #2b2929c9;
+    position: relative;
+    bottom: 0;
+}
+
+footer .container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container p {
+    color: white;
+}
+.small-footer{
+    bottom: -100px;
+}
+@media (max-width:767px) {
+    .small-footer{
+        display: none;
+    }
+}
 /* About us page  */
 .bar .container {
     background-color: rgb(192, 160, 128);
@@ -447,50 +479,6 @@ header .links li.list:hover .on {
     text-align: center;
     margin: 20px auto 0;
     line-height: 1.7;
-}
-
-.ourphoto img {
-    width: 500px;
-    height: 400px;
-    margin: 0% 50% 10% 80%;
-}
-
-/* contact  */
-.area .back {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.area textarea {
-    resize: none;
-    height: 200px;
-    width: 350px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #ffffff99;
-}
-
-.area textarea:focus {
-    outline: none;
-}
-
-.area .bottom {
-    display: block;
-    padding: 10px 20px;
-    width: fit-content;
-    border-radius: 50px;
-    color: black;
-    background-color: #817eb2;
-    outline: none;
-    border: none;
-    margin-left: 20px;
-}
-
-.area .bottom:hover {
-    background-color: cornflowerblue;
-    color: white;
 }
 
 .person {
@@ -542,5 +530,57 @@ header .links li.list:hover .on {
 
     .group .container .photo img {
         max-width: 90%;
+    }
+}
+
+/* contact  */
+.area .back {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.area textarea {
+    resize: none;
+    height: 200px;
+    width: 350px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff99;
+}
+
+.area textarea:focus {
+    outline: none;
+}
+
+.area .bottom {
+    display: block;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 50px;
+    color: black;
+    background-color: #817eb2;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.area .bottom:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+.location i{
+    color: #8c0a14;
+}
+
+@media (max-width:767px) {
+    .area .back {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .area textarea{
+        width: 3000px;
     }
 }
